@@ -1,202 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Аазам Жунусов — резюме</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #161b26;
-    --panel: #1d2330;
-    --line: #2c3446;
-    --text: #e8e6e1;
-    --muted: #9ba3b4;
-    --gold: #d8b26a;
-    --display: "Unbounded", system-ui, sans-serif;
-    --body: "Golos Text", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { background: var(--bg); }
-  body {
-    font-family: var(--body);
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--text);
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 56px 32px 80px;
-  }
-  a { color: var(--gold); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 24px;
-    flex-wrap: wrap;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--line);
-  }
-  h1 {
-    font-family: var(--display);
-    font-weight: 700;
-    font-size: clamp(34px, 6vw, 58px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-  }
-  .role { color: var(--muted); font-size: 19px; margin-top: 12px; }
-
-  nav { display: flex; gap: 6px; }
-  nav a {
-    color: var(--muted);
-    padding: 8px 16px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    font-size: 15px;
-  }
-  nav a:hover { color: var(--text); text-decoration: none; border-color: var(--muted); }
-  nav a[aria-current="page"] { color: var(--bg); background: var(--gold); border-color: var(--gold); font-weight: 500; }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 56px;
-    margin-top: 40px;
-  }
-  aside { align-self: start; position: sticky; top: 32px; }
-  .photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-    box-shadow: 0 0 0 1px var(--line), 0 0 0 6px var(--bg), 0 0 0 7px rgba(216,178,106,.45);
-  }
-  .contacts { margin-top: 28px; display: grid; gap: 14px; }
-  .contacts dt { color: var(--muted); font-size: 14px; }
-  .contacts dd { font-size: 16px; overflow-wrap: anywhere; }
-
-  main section + section { margin-top: 48px; }
-  h2 {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: 22px;
-    margin-bottom: 18px;
-    letter-spacing: -0.01em;
-  }
-  main p { max-width: 64ch; }
-
-  .skills { display: grid; grid-template-columns: max-content 1fr; gap: 12px 28px; }
-  .skills dt { color: var(--muted); }
-
-  .projects { list-style: none; display: grid; gap: 4px; }
-  .projects li { padding: 18px 0 18px 20px; border-left: 2px solid var(--line); }
-  .projects li:hover { border-left-color: var(--gold); }
-  h3 { font-size: 18px; font-weight: 600; }
-  .stack { color: var(--muted); font-size: 15px; margin-top: 6px; }
-  .projects p { margin-top: 4px; }
-
-  .timeline { list-style: none; position: relative; }
-  .timeline::before {
-    content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px;
-    width: 2px; background: var(--line);
-  }
-  .timeline > li { position: relative; padding-left: 36px; }
-  .timeline > li + li { margin-top: 40px; }
-  .timeline > li::before {
-    content: ""; position: absolute; left: 0; top: 7px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--bg); border: 2px solid var(--gold);
-  }
-  .period { color: var(--gold); font-size: 15px; font-weight: 500; }
-  .place { color: var(--muted); font-size: 15px; }
-  .timeline h3 { margin-top: 4px; font-size: 20px; }
-  .tasks { margin-top: 12px; padding-left: 18px; display: grid; gap: 6px; max-width: 64ch; }
-  .tasks li::marker { color: var(--gold); }
-
-  @media (max-width: 760px) {
-    body { padding: 32px 20px 56px; font-size: 16px; }
-    header { align-items: flex-start; }
-    .layout { grid-template-columns: 1fr; gap: 40px; }
-    aside { position: static; display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
-    .photo { border-radius: 16px; }
-    .contacts { margin-top: 0; gap: 8px; }
-    .contacts dt { font-size: 13px; }
-    .contacts dd { font-size: 14px; }
-    .skills { grid-template-columns: 1fr; gap: 2px; }
-    .skills dd { margin-bottom: 12px; }
-  }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-  <header>
-    <div>
-      <h1>Аазам Жунусов</h1>
-      <p class="role">Студент-программист</p>
+
+    <header>
+        <h1>Жунусов Аазам</h1>
+        <p class="subtitle">Студент-программист</p>
+    </header>
+
+    <div class="layout-container">
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">Опыт работы</a></li>
+            </ul>
+
+            <div class="profile-box">
+                <img src="photo.jpg" alt="Фото профиля" class="avatar">
+                <p><strong>Город:</strong> Бишкек, Кыргызстан</p>
+                <p><strong>Email:</strong> aazamzunusov039@gmail.com</p>
+                <p><strong>Телефон:</strong> +996 500 960 697</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Elcycyi" target="_blank" rel="noopener noreferrer">Elcycyi</a></p>
+            </div>
+        </nav>
+
+        <main>
+            <section class="card">
+                <h2>О себе</h2>
+                <p>
+                    Студент направления «Прикладная информатика» в КГИПИ. С 2022 года работаю в стартапе:
+                    начинал junior-разработчиком, затем стал продукт-менеджером. Участвовал в 5 рабочих проектах.
+                    Интересуюсь бэкенд-разработкой на Java, базами данных и машинным обучением.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Технические навыки</h2>
+                <ul>
+                    <li>Java, Spring Boot</li>
+                    <li>SQL, PostgreSQL</li>
+                    <li>Python</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Машинное обучение: XGBoost, LightGBM</li>
+                    <li>Инструменты: Git, k6, Cisco Packet Tracer</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Проекты</h2>
+                <div class="project-item">
+                    <h3>1. Интернет-магазин канцтоваров</h3>
+                    <p>Веб-приложение на Spring Boot и PostgreSQL с каталогом, корзиной и авторизацией.</p>
+                </div>
+                <div class="project-item">
+                    <h3>2. PumpGuard AI</h3>
+                    <p>Система поиска аномалий в данных датчиков промышленных насосов на Python.</p>
+                </div>
+                <div class="project-item">
+                    <h3>3. Кредитный скоринг</h3>
+                    <p>Научная статья о модели оценки кредитного риска с использованием XGBoost и LightGBM.</p>
+                </div>
+            </section>
+        </main>
     </div>
-    <nav>
-      <a href="index.html" aria-current="page">Главная</a>
-      <a href="about.html">Опыт работы</a>
-    </nav>
-  </header>
 
-  <div class="layout">
-    <aside>
-      <img class="photo" src="photo.jpg" alt="Аазам Жунусов" width="480" height="480">
-      <dl class="contacts">
-        <div><dt>Город</dt><dd>Бишкек, Кыргызстан</dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:aazamzunusov039@gmail.com">aazamzunusov039@gmail.com</a></dd></div>
-        <div><dt>Телефон</dt><dd><a href="tel:+996500960697">+996 500 960 697</a></dd></div>
-        <div><dt>GitHub</dt><dd><a href="https://github.com/Elcycyi">Elcycyi</a></dd></div>
-      </dl>
-    </aside>
-
-    <main>
-      <section>
-        <h2>О себе</h2>
-        <p>Студент направления «Прикладная информатика» в КГИПИ. С 2022 года работаю в стартапе: начинал junior-разработчиком, последний год веду продукт как продукт-менеджер. За это время участвовал в пяти рабочих проектах. Пишу бэкенд на Java и Spring Boot, работаю с базами данных и машинным обучением. Мне интересно создавать продукты, в которых сходятся код и бизнес-задачи.</p>
-      </section>
-
-      <section>
-        <h2>Навыки</h2>
-        <dl class="skills">
-          <dt>Языки</dt><dd>Java, Python, SQL, JavaScript, HTML/CSS</dd>
-          <dt>Бэкенд</dt><dd>Spring Boot, REST API, JWT-авторизация</dd>
-          <dt>Базы данных</dt><dd>PostgreSQL, ClickHouse</dd>
-          <dt>Машинное обучение</dt><dd>XGBoost, LightGBM, Isolation Forest, LSTM</dd>
-          <dt>Продукт</dt><dd>Сбор требований, roadmap, приоритизация задач, работа с командой</dd>
-          <dt>Инструменты</dt><dd>Git, k6, Cisco Packet Tracer</dd>
-        </dl>
-      </section>
-
-      <section>
-        <h2>Проекты</h2>
-        <ul class="projects">
-          <li>
-            <h3>Stationery Store</h3>
-            <p>Интернет-магазин канцтоваров с каталогом, корзиной, заказами и авторизацией. Проверен нагрузочным тестированием.</p>
-            <p class="stack">Java 21, Spring Boot 3.3, PostgreSQL, JWT, k6</p>
-          </li>
-          <li>
-            <h3>PumpGuard AI</h3>
-            <p>Система поиска аномалий в данных датчиков промышленных насосов, чтобы замечать поломки до аварии.</p>
-            <p class="stack">Python, ClickHouse, Isolation Forest, LSTM Autoencoder</p>
-          </li>
-          <li>
-            <h3>Кредитный скоринг</h3>
-            <p>Научная статья о модели оценки кредитного риска на основе стекинга двух алгоритмов бустинга.</p>
-            <p class="stack">Python, XGBoost, LightGBM</p>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </div>
 </body>
 </html>
